@@ -53,5 +53,62 @@ public class conditionalstatements_and_loops {
         n=n/10;
      }
         System.out.println(count);
-   }
+
+//Q5 Write a program to print whether a number is even or odd, also take input from the user.
+    int N=sc.nextInt();
+    if(N%2==0){
+        System.out.println("even");
+    }
+    else{
+        System.out.println("odd");         
+    }
+
+//Q6  Take name as input and print a greeting message for that particular name.
+    String name=sc.nextLine();
+    System.out.println(name+" "+"have a great day!");  
+
+//Q7 Write a program to input principal, time, and rate (P, T, R) from the user and find Simple Interest.
+    float P=sc.nextFloat();
+    float T=sc.nextFloat();
+    float R=sc.nextFloat();
+    System.out.println((P*T*R)/100);  
+
+//Q8 To find out whether the given String is Palindrome or not.
+    String str=sc.nextLine();
+    String newstr=str;
+    String reverse="";
+    for(int i=str.length()-1;i>=0;i--){
+        reverse=reverse+str.charAt(i);
+    }
+    if(reverse.equals(newstr)){
+        System.out.println("Pallendome");
+    }
+    else{
+        System.out.println("Not a Pallendome");
+    }   
+
+//Q9 To find Armstrong Number between two given number.
+     int first=sc.nextInt();
+     int Last=sc.nextInt();
+     for(int i=first;i<=Last;i++){
+        int sum=0;
+        int digit=0;
+        int temp=i; //used to store original value of i
+        while(temp>0){
+            temp=temp/10;
+            digit++;
+        }
+        temp=i; //reassigning original value to temp
+
+        //need another while loop to calculate sum of powers of digits
+        while(temp>0){
+        int remainder=temp%10;
+        sum=sum+(int)Math.pow(remainder,digit);
+        temp=temp/10;
+        }
+        if(sum==i){
+            System.out.println(i);
+        }
+    }
+  }
 }
