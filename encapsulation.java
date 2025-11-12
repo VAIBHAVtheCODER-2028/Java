@@ -1,7 +1,8 @@
 public class encapsulation {
     public static void main(String[] args) {
        Parent obj=new Parent();
-       
+
+        // Using setters
        obj.setId(100);
        obj.setName("Vaibhav");
 
@@ -10,6 +11,7 @@ public class encapsulation {
     }
 }
 
+// Private fields (encapsulated data)
 class Parent{
     private int num;
     private String str;
@@ -34,3 +36,4 @@ String getName(){
     return str;
 }
 }
+
